@@ -1,19 +1,31 @@
 const formEl = document.querySelector("#loginForm");
 
+const method = "post";
+
+
 formEl.addEventListener('submit', event => {
     event.preventDefault();
 
+    const form = event.target;
     const formData = new FormData(formEl);
-    const data = Object.fromEntries(formData);
+    const profile = Object.fromEntries(formData.entries())
+    login(profile);
     //console.log (formData.get('name'));
 
-    fetch('https://nf-api.onrender.com/api/v1/social/auth/login', {
-        method:'post',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    });
+    async function login(profile) {
+        const loginURL = 'https://nf-api.onrender.com/api/v1/social/auth/login'
+        const body = JSON.stringify(profile);
 
-    console.log(data);
-})
+        const response = await fetch(loginURL, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method,
+            body
+        })
+
+        const result = await response.json()
+        console.log(result);
+    }
+}
+)
