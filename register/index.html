@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media PLatform Register Page</title>
+    <script
+      src="https://kit.fontawesome.com/8d4272ce0c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="/index.mjs" defer type="module"></script>
+    <script src="/handlers/register.mjs" defer type="module"></script> -->
+    <script src="script.js" defer type="module"></script>
+  </head>
+
+  <body>
+    <div class="log-container">
+      <div class="form-box">
+        <nav class="nav-section">
+          <a href="index.html">REGISTER</a>
+          <a href="/login">LOG IN</a>
+        </nav>
+
+        <h1>Register</h1>
+
+        <form
+          class="formclass"
+          id="registerForm"
+          method="POST"
+          action="/auth/register"
+        >
+          <i class="fa-solid fa-user"></i>
+          <input
+          value="Marius89445"
+            placeholder="Name"
+            type="text"
+            name="name"
+            required
+            pattern="^[\w]+$"
+            title="username must only contain lower case and upper case letters, numbers and underscore (_). example"
+          />
+
+          <i class="fa-solid fa-envelope"></i>
+          <input
+          value="marius111@noroff.no"
+            placeholder="Email"
+            type="email"
+            name="email"
+            required
+            pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+            title="please match the requiredments"
+          />
+
+          <i class="fa-solid fa-lock"></i>
+          <input
+            value="marius111"
+            placeholder="Password"
+            type="password"
+            name="password"
+            required
+            minlength="8"
+          />
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input placeholder="banner" type="url" name="banner" />
+
+          <i class="fa-solid fa-user-plus"></i>
+          <input placeholder="avatar" type="url" name="avatar" />
+
+          <div id="reg-message"></div>
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
