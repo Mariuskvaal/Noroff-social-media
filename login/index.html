@@ -21,7 +21,7 @@
         <div class="form-box">
 
             <nav class="nav-section">
-                <a href="/register-page/index.html">REGISTER</a>
+                <a href="/register/index.html">REGISTER</a>
                 <a href="index.html">LOGIN</a>
             </nav>
 
@@ -30,7 +30,7 @@
             <form class="formclass" id="loginForm" method="POST" action="/auth/login"> 
 
                 <i class="fa-solid fa-envelope"></i>
-                <input placeholder="Email" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="please match the requiredments">
+                <input placeholder="Email" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="please match the requirements">
         
                 <i class="fa-solid fa-lock"></i>
                 <input placeholder="Password" type="password" name="password" required minlength="8">
@@ -38,6 +38,8 @@
                 <button type="submit"> Login </button>
 
             </form>
+
+            <p id="message"></p>
         </div>
     </div>
 </body>
