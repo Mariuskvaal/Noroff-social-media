@@ -14,18 +14,37 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="/style/posts.css">
+    <link rel="stylesheet" href="/style/posts.css" />
 
     <script src="posts.js" defer type="module"></script>
   </head>
 
   <body>
-    <h1>Posts Page</h1>
-    <a> This is the page were all the posts will be </a>
+    <main>
+      <div class="title.and.parag">
+        <h1>Posts Page</h1>
+        <a> This is the page were all the posts will be </a>
+      </div>
 
-    <div id="postsContainer">
-      <div id="htmlPostsTitle"></div>
-      <div id="htmlPostsBody"></div>
-    </div>
+      <div class="filter.and.search">
+        <select id="filterSelect">
+          <option value="">No filter</option>
+          <option value="image">Posts with images</option>
+          <option value="body">Posts with body text</option>
+        </select>
+
+        <!-- Input field for search -->
+        <input type="text" id="filterInput" placeholder="Search posts" />
+      </div>
+
+      <div class="container.for.posts">
+        <div class="wrapper.for.posts">
+          <!-- Container for posts -->
+          <div id="postsContainer">
+            <!-- Posts will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
