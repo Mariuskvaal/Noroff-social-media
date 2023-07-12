@@ -2,5 +2,32 @@ body {
     font-family: Arial, sans-serif;
     background-color: #fafafa;
 }
-  
+
+.titleAndFilterSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.postsContainer.css{
+    display: flex;
+    
+}
+
+.container.for.posts{
+    display: flex;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    margin: 10px;
+}
+
+img{
+    width: 100%;
+}
   

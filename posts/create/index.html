@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Social Media PLatform Login Page</title>
+
+    <script
+      src="https://kit.fontawesome.com/8d4272ce0c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/style/create.post.css"/>
+
+    <script src="create.js" defer type="module"></script>
+  </head>
+
+  <body>
+
+    <div class="log-container">
+      <div class="form-box">
+        <nav class="nav-section">
+          <a href="index.html"> Create a post </a>
+          <a href="/posts/update/"> </a>
+          <a href="/posts/index.html"> Post </a>
+        </nav>
+
+    <main>
+        <form
+          class="formclass"
+          id="registerForm"
+          method="POST"
+          action="/social/posts"
+        >
+        <form method="post" action="/social/posts">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+        
+            <label for="body">Body:</label><br>
+            <textarea id="body" name="body"></textarea><br><br>
+        
+            <label for="tags">Tags:</label><br>
+            <input type="text" id="tags" name="tags"><br><br>
+        
+            <label for="media">Media:</label><br>
+            <input type="text" id="media" name="media"><br><br>
+        
+            <input type="submit" value="Submit">
+          </form>
+        </body>
+
+      <div class="titleAndFilterSection">
+        <div class="title.and.parag">
+          <h1> Create a post</h1>
+          <a> Create a post </a>
+        </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

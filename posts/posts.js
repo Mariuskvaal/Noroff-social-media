@@ -1,6 +1,7 @@
 const postsContainer = document.querySelector("#postsContainer");
 const filterSelect = document.querySelector("#filterSelect");
 const filterInput = document.querySelector("#filterInput");
+const idInput = document.querySelector("#idInput");
 
 // Function to fetch and display posts
 async function fetchAndDisplayPosts() {
@@ -15,6 +16,8 @@ async function fetchAndDisplayPosts() {
     });
 
     const posts = await response.json();
+
+    console.log(posts);
 
     if (response.ok) {
       // Save posts in a property for filtering
@@ -52,24 +55,32 @@ function displayPosts(posts) {
 }
 
 // Function to filter posts
+// Function to filter posts
 function filterPosts() {
   const filterType = filterSelect.value;
   const searchTerm = filterInput.value.toLowerCase();
+  const searchId = parseInt(idInput.value, 10);
 
   // Filter posts
   let filteredPosts = postsContainer.posts;
 
-  if (filterType === "image") {
-    filteredPosts = filteredPosts.filter(post => post.media);
-  } else if (filterType === "body") {
-    filteredPosts = filteredPosts.filter(post => post.body && post.body.trim().length > 0);
-  }
+  // If there's an ID input, only filter by ID
+  if (searchId) {
+    filteredPosts = filteredPosts.filter(post => post.id && post.id === searchId);
+  } else {
+    // Apply other filters if ID filter is not used
+    if (filterType === "image") {
+      filteredPosts = filteredPosts.filter(post => post.media);
+    } else if (filterType === "body") {
+      filteredPosts = filteredPosts.filter(post => post.body && post.body.trim().length > 0);
+    }
 
-  // Filter by search term
-  filteredPosts = filteredPosts.filter(post =>
-    (post.title && post.title.toLowerCase().includes(searchTerm)) ||
-    (post.body && post.body.toLowerCase().includes(searchTerm))
-  );
+    // Filter by search term
+    filteredPosts = filteredPosts.filter(post =>
+      (post.title && post.title.toLowerCase().includes(searchTerm)) ||
+      (post.body && post.body.toLowerCase().includes(searchTerm))
+    );
+  }
 
   // Display the filtered posts
   displayPosts(filteredPosts);
@@ -78,6 +89,9 @@ function filterPosts() {
 // Event listeners for filter input and select
 filterInput.addEventListener("input", filterPosts);
 filterSelect.addEventListener("change", filterPosts);
+idInput.addEventListener("input", filterPosts);
+
+
 
 // Call the function to fetch and display posts
 fetchAndDisplayPosts();
