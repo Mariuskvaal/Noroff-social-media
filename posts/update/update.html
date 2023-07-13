@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Social Media PLatform Login Page</title>
+
+    <script
+      src="https://kit.fontawesome.com/8d4272ce0c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/style/update.css"/>
+
+    <script src="update.js" defer type="module"></script>
+  </head>
+
+  <body>
+
+    <div class="log-container">
+      <div class="form-box">
+        <nav class="nav-section">
+          <a href="index.html"> Create a post </a>
+          <a href="/posts/update/"> Update Post </a>
+          <a href="/posts/index.html"> Post </a>
+          <a href="/posts/delete/delete.html"> Delete Post </a>
+        </nav>
+
+        <h1>Edit Post</h1>
+
+        <label for="postId">Enter Post ID:</label>
+        <input type="text" id="postId">
+        <button id="searchButton">Search</button>
+        
+        <form id="updateForm" class="hidden">
+          <label for="title">Title:</label>
+          <input type="text" id="title" required><br>
+      
+          <label for="body">Body:</label>
+          <textarea id="body" required></textarea><br>
+
+          <label for="tags">Tags:</label><br>
+          <input type="text" id="tags" name="tags"><br><br>
+      
+          <label for="media">Media:</label><br>
+          <input type="text" id="media" name="media"><br><br>
+      
+          <button id="updateButton" type="submit">Update Post</button>
+        </form>
+ 
+  </body>
+</html>

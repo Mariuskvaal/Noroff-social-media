@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Social Media PLatform Login Page</title>
+
+    <script
+      src="https://kit.fontawesome.com/8d4272ce0c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/style/update.css"/>
+
+    <script src="delete.js" defer type="module"></script>
+  </head>
+
+  <body>
+
+    <div class="log-container">
+      <div class="form-box">
+        <nav class="nav-section">
+          <a href="index.html"> Create a post </a>
+          <a href="/posts/update/"> Update Post </a>
+          <a href="/posts/index.html"> Post </a>
+          <a href="/posts/delete/delete.html"> Delete Post </a>
+        </nav>
+
+        <h1>Delete Post</h1>
+        <label for="postId">Enter Post ID:</label>
+        <input type="text" id="postId">
+        <button id="searchButton">Search</button>
+        
+        <form id="deleteForm" class="hidden">
+          <label for="title">Title:</label>
+          <input type="text" id="title" readonly><br>
+      
+          <label for="body">Body:</label>
+          <textarea id="body" readonly></textarea><br>
+      
+          <label for="tags">Tags:</label>
+          <input type="text" id="tags" readonly><br>
+      
+          <label for="media">Media:</label>
+          <input type="text" id="media" readonly><br>
+      
+          <button id="deleteButton" type="submit">Delete Post</button>
+        </form>
+
+
+ 
+  </body>
+</html>
